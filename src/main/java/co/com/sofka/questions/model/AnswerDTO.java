@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class AnswerDTO {
+
     @NotBlank
     private String userId;
     @NotBlank
@@ -15,6 +16,15 @@ public class AnswerDTO {
 
     private Integer position;
 
+    private Integer vote;
+
+    public Integer getVote() {
+        return vote;
+    }
+
+    public void setVote(Integer vote) {
+        this.vote = vote;
+    }
 
     public AnswerDTO() {
 

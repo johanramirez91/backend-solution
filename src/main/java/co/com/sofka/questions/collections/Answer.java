@@ -11,6 +11,15 @@ public class Answer {
     private String questionId;
     private String answer;
     private Integer position;
+    private Integer vote;
+
+    public Integer getVote() {
+        return vote;
+    }
+
+    public void setVote(Integer vote) {
+        this.vote = vote;
+    }
 
     public Integer getPosition() {
         return position;
