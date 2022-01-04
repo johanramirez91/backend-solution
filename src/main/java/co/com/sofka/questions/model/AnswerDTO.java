@@ -6,7 +6,8 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class AnswerDTO {
-
+    @NotBlank
+    private String id;
     @NotBlank
     private String userId;
     @NotBlank
@@ -18,22 +19,31 @@ public class AnswerDTO {
 
     private Integer vote;
 
+    public AnswerDTO() {
+
+    }
+
+    public AnswerDTO(@NotBlank String questionId, @NotBlank String userId, @NotBlank String answer, @NotBlank String id) {
+        this.userId = userId;
+        this.questionId = questionId;
+        this.answer = answer;
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public Integer getVote() {
         return vote;
     }
 
     public void setVote(Integer vote) {
         this.vote = vote;
-    }
-
-    public AnswerDTO() {
-
-    }
-
-    public AnswerDTO(@NotBlank String questionId, @NotBlank String userId, @NotBlank String answer) {
-        this.userId = userId;
-        this.questionId = questionId;
-        this.answer = answer;
     }
 
     public Integer getPosition() {

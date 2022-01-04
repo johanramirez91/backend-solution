@@ -9,7 +9,7 @@ import java.util.function.Function;
 @Component
 public class QuestionMapper {
 
-    public Function<QuestionDTO, Question> mapperToQuestion(String id) {
+    public Function<QuestionDTO, Question> mapToQuestion(String id) {
         return updateQuestion -> {
             var question = new Question();
             question.setId(id);
@@ -22,7 +22,7 @@ public class QuestionMapper {
         };
     }
 
-    public Function<Question, QuestionDTO> mapEntityToQuestion() {
+    public Function<Question, QuestionDTO> mapQuestionToQuestionDTO() {
         return entity -> new QuestionDTO(
                 entity.getId(),
                 entity.getUserId(),

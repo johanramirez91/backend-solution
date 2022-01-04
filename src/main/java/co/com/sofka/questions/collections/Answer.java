@@ -13,6 +13,8 @@ public class Answer {
     private Integer position;
     private Integer vote;
 
+
+
     public Integer getVote() {
         return vote;
     }
